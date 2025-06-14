@@ -1,0 +1,58 @@
+openapi: 3.0.0
+info:
+  title: Zero to One Sheets Proxy
+  version: 1.0.0
+servers:
+  - url: https://gsheet-proxy-lite.ikr00424.workers.dev
+paths:
+  /:
+    get:
+      summary: Read range from Google Sheet
+      parameters:
+        - name: spreadsheetId
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: range
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful read
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      summary: Write values to Google Sheet
+      parameters:
+        - name: spreadsheetId
+          in: query
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                range:
+                  type: string
+                values:
+                  type: array
+                  items:
+                    type: array
+                    items:
+                      type: string
+      responses:
+        '200':
+          description: Successful write
+          content:
+            application/json:
+              schema:
+                type: object

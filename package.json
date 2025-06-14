@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@heroicons/react": "^2.2.0",
+    "@types/react": "^19.1.5",
+    "@types/react-dom": "^19.1.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.21"
+  }
+}
