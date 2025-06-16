@@ -6,6 +6,7 @@
     "@types/react-dom": "^19.1.6",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.5",
+    "postcss-import": "^16.1.0",
     "postcss-nesting": "^13.0.2",
     "tailwindcss": "^4.1.10"
   },
