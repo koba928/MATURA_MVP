@@ -1,9 +1,12 @@
-// ✅ 正しい postcss.config.js
+// postcss.config.js
 module.exports = {
-  plugins: [
-    require('postcss-nesting'),
-    require('tailwindcss'),
-    require('autoprefixer'),
-  ],
-}
+  plugins: {
+    'postcss-import': {},
+    'tailwindcss/nesting': 'postcss-nesting',
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
+
+
 
